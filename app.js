@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 const corsAllowed = {
-    origin: 'http://localhost:5173',
+    origin: 'https://mapexsite.netlify.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowHeaders: ['Content-Type', '*'],
     credentials: true,
@@ -39,10 +39,10 @@ app.use(session({
     }),
     cookie: {
         maxAge: 1000 * 60 * 60 * 24,
-        httpOnly: false,
+        httpOnly: true,
         sameSite: 'none',
-        secure: false,
-        domain: ''
+        secure: true,
+        domain: 'mapex-backend.onrender.com'
     }
 }));
 
