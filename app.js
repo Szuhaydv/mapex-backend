@@ -20,7 +20,6 @@ const corsAllowed = {
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', '*'],
     credentials: true,
-    exposeHeaders: ["set-cookie", "ajax_redirect"]
 }
 
 app.use(cors(corsAllowed))
