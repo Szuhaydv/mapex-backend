@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended: true}))
 const corsAllowed = {
     origin: 'https://mapexsite.netlify.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowHeaders: ['Content-Type', '*'],
+    allowedHeaders: ['Content-Type', '*'],
     credentials: true,
     exposeHeaders: ["set-cookie", "ajax_redirect"]
 }
